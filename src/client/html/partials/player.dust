@@ -1,0 +1,21 @@
+<div id="{id}" class="player-container">
+    <div class="player-flipper">
+        <div class="player front visible">
+            <div class="shirt"><img src="image/teams/England.png"></div>
+            <div class="info">
+                <span class="name">Name</span>
+                <span class="country">Country</span> 
+                <span class="twitter">@twitter</span>
+            </div>
+        </div>
+
+        <div class="player back">
+            <div class="shirt"><img src="image/teams/England.png"></div>
+            <div class="info">
+                <span class="name">Name</span>
+                <span class="country">Country</span> 
+                <span class="twitter">@twitter</span>
+            </div>
+        </div>
+    </div>
+</div>

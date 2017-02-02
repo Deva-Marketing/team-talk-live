@@ -1,0 +1,13 @@
+<div id="{id}" class="player-container">
+    <div class="player-flipper">
+        <div class="player front visible">
+            <div class="name">Name</div>
+            <div class="country">Country</div>
+        </div>
+
+        <div class="player back">
+            <div class="name">Name</div>
+            <div class="country">Country</div>
+        </div>
+    </div>
+</div>

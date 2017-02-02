@@ -1,0 +1,161 @@
+.player-row {
+    padding: 0 50px;
+    text-align: center;
+    
+     @media #{$media-small} {
+        padding: 0 30px;
+    }
+
+    @media #{$media-minimum} {
+        padding: 0 20px;
+        text-align: left;
+    }
+    
+    > .player-container {
+        display: inline-block;
+        position: relative;
+        width: 25%;
+        height: 8.8em;
+        
+        @media #{$media-minimum} {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 4.5em;
+        }
+        
+        > .player-flipper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+
+            width: 100%;
+            height: 100%;
+
+            > .player {
+                backface-visibility: hidden;
+                transition: transform 0.5s;
+                transform-origin: center;
+                
+                color: $primary-color;
+                text-align: center;
+                
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                
+                width: 100%;
+                height: 100%;
+
+                &.front {
+                    z-index: 2;
+	                transform: perspective(600px) rotateY(0deg);
+                    
+                    @media #{$media-minimum} {
+                        transform: perspective(600px) rotateX(0deg);
+                    }
+                }
+                
+                &.back {
+                    transform: perspective(600px) rotateY(-180deg);
+                    
+                    @media #{$media-minimum} {
+                        transform: perspective(600px) rotateX(-180deg);
+                    }
+                }
+            
+                > .shirt {            
+                    width: 100%;
+                    height: auto;
+                    padding: 0 10px;
+
+                    @media #{$media-minimum} {
+                        display: inline-block;
+                        width: 25%;
+                        height: 100%;
+                        padding: 0;
+                    }
+
+                    > img {
+                        width: 90%;
+                        height: auto;
+
+                        @media #{$media-minimum} {
+                            width: auto;
+                            height: 100%;
+                        }
+                    }
+                }
+                
+                > .info {
+                    width: 100%;
+                    padding: 0 10px;
+                    
+                    @media #{$media-minimum} {
+                        display: inline-block;
+                        width: 75%;
+                        padding: 4px 0 0 20px;
+                        
+                        vertical-align: top;
+                        text-align: left;
+                    }
+
+                    > .name {
+                        display: block;
+                        
+                        font-size: 0.9em;
+                        font-weight: 700;
+                        
+                        @media #{$media-minimum} {
+                            font-size: 1.4em;
+                            padding-bottom: 4px;
+                        }
+                    }
+
+                    > .country {
+                       font-size: 0.7em;
+                        
+                        @media #{$media-minimum} {
+                            font-size: 1em;
+                        }
+                    }
+
+                    > .twitter {
+                       font-size: 0.7em;
+
+                        > a {
+                            color: $primary-color;
+                            text-decoration: none;
+                        }
+                        
+                        @media #{$media-minimum} {
+                            font-size: 1em;
+                        }
+                    }
+                }
+            }
+        }
+        
+        &.flip {
+            > .player-flipper > .front {
+                transform: perspective(600px) rotateY(180deg);
+
+                @media #{$media-minimum} {
+                    transform: perspective(600px) rotateX(180deg);
+                }
+            }
+            
+            > .player-flipper > .back {
+                transform: perspective(600px) rotateY(0deg);
+
+                @media #{$media-minimum} {
+                    transform: perspective(600px) rotateX(0deg);
+                }
+            }
+        }
+    }
+}

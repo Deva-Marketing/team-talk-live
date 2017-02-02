@@ -1,0 +1,96 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1.2vmax;
+
+    @media #{$media-minimum} {
+         font-size: 2vmax;
+    }
+}
+
+body {
+    background-image: url("../image/bg.jpg");
+    background-color: #cccccc;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    font-family: Geomanist;
+    
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    
+    padding: 40px 40px 110px;
+
+    @media #{$media-minimum} {
+        padding: 0;
+    }
+}
+
+header {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+    
+    @media #{$media-minimum} {
+        display: block;
+        width: 100%;
+        
+        text-align: center;
+        padding: 20px 20px 0;
+    }
+}
+
+section {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    padding: 0 40px;
+    
+    @media #{$media-small} {
+        width: 75%;
+        padding: 0 0 0 40px;        
+    }
+    
+    @media #{$media-minimum} {
+        display: block;
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+aside {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+    
+    @media #{$media-small} {
+        display: none;
+    }
+    
+    @media #{$media-minimum} {
+        display: none;
+    }
+}
+
+footer {
+    width: 100%;
+    height: 70px;
+    
+    position: fixed;
+    padding: 0 40px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    z-index: 10;
+
+    @media #{$media-minimum} {
+        position: inherit;
+        height: auto;
+        
+        padding: 20px 40px;
+    }
+}

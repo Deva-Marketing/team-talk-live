@@ -1,0 +1,81 @@
+section {
+    > .field-ground {
+        position: relative;
+        
+        background: rgba(43, 254, 202, 0.7);
+        box-shadow: 0px 0px 40px #28a7a9;
+        border-radius: 5px;
+
+        overflow: hidden;
+        
+        z-index: 1;
+        
+        > .field-bg {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 60px 50px;
+            z-index: -1;
+
+            @media #{$media-small} {
+                padding: 40px 30px;
+            }
+
+            @media #{$media-minimum} {
+                display: none;
+            }
+        }
+        
+        > .field {
+            padding: 30px 0;
+            font-size: 1rem;
+            
+            @media #{$media-minimum} {
+                padding: 20px 0;
+            }
+
+            .hr1 {
+                background-color: #80fedf;
+                height: 5px;
+                border: 0px;
+            }
+
+            .hr2 {
+                background-color: #80fedf;
+                height: 2px;
+                border: 0px;
+            }
+
+            .line-player-goalkeeper {
+                margin-bottom: 20px;
+
+                @media #{$media-small-up} {
+                    display: none;
+                }
+
+                span {
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: #34485e;
+                }
+            }
+
+            .line-players {
+                margin: 20px 0;
+
+                @media #{$media-small-up} {
+                    display: none;
+                }
+
+                span {
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: #34485e;
+                }
+            }
+        }
+    }
+}

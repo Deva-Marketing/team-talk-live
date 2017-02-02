@@ -1,0 +1,13 @@
+// Core variables and mixins
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "font";
+
+// Import custom styles
+@import "custom/layout.scss";
+@import "custom/header.scss";
+@import "custom/field.scss";
+@import "custom/players.scss";
+@import "custom/bench.scss";
+@import "custom/footer.scss";

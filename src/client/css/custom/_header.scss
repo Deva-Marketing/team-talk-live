@@ -1,0 +1,37 @@
+header {
+    color: $primary-color;
+    
+    img {
+        @media #{$media-minimum} {
+            width: 25%;
+        }
+    }
+    
+    h1 {
+        padding-top: 1.2rem;
+        
+        font-size: 2rem;
+        font-weight: 700;
+        
+        @media #{$media-minimum} {
+            padding-top: 2rem;
+        }
+    }
+    
+    p {
+        padding-top: 1.2rem;
+        
+        font-size: 1rem;
+        font-weight: 200;
+        line-height: 1.4rem;
+
+        @media #{$media-minimum} {
+            font-size: 1.3rem;
+            line-height: 1.7rem;
+        }
+        
+        span {
+            font-weight: 700;
+        }
+    }
+}
